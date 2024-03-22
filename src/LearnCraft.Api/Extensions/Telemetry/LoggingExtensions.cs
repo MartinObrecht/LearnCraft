@@ -2,7 +2,7 @@
 {
     public static class LoggingExtensions
     {
-        public static void ILoggingBuilder(this ILoggingBuilder loggingBuilder,
+        public static void AddLoggingExtensions(this ILoggingBuilder loggingBuilder,
         IConfiguration configuration)
         {
             loggingBuilder.ClearProviders();

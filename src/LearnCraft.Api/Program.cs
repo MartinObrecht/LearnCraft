@@ -1,7 +1,9 @@
-using Microsoft.Extensions.Logging.ApplicationInsights;
+using LearnCraft.Api.Extensions.Telemetry;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddApplicationInsightsExtensions(builder.Configuration);
+builder.Logging.AddLoggingExtensions(builder.Configuration);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -2,7 +2,7 @@
 
 public static class ApplicationInsightsExtensions
 {
-    public static void AddApplicationInsights(this IServiceCollection services, IConfiguration configuration)
+    public static void AddApplicationInsightsExtensions(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddApplicationInsightsTelemetry(options =>
             {
