@@ -18,7 +18,12 @@ public class CachorrosController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> Get()
+    [Produces(contentType: "application/json")]
+    [ProducesResponseType(typeof(IEnumerable<Cachorro>), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+
+    public async Task<IActionResult> GetAsync()
     {
         var cachorros = await _cachorroContext.Cachorros.ToListAsync();
 
@@ -30,7 +35,11 @@ public class CachorrosController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetById(int id)
+    [Produces(contentType: "application/json")]
+    [ProducesResponseType(typeof(Cachorro), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<IActionResult> GetByIdAsync(int id)
     {
         var cachorro = await _cachorroContext.Cachorros.FindAsync(id);
 
@@ -42,11 +51,34 @@ public class CachorrosController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Post(Cachorro cachorro)
+    [Produces(contentType: "application/json")]
+    [ProducesResponseType(typeof(Cachorro), StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<IActionResult> PostAsync(Cachorro cachorro)
     {
         await _cachorroContext.Cachorros.AddAsync(cachorro);
         await _cachorroContext.SaveChangesAsync();
 
-        return CreatedAtAction(nameof(GetById), new { id = cachorro.Id }, cachorro);
+        return CreatedAtAction(nameof(GetByIdAsync), new { id = cachorro.Id }, cachorro);
+    }
+
+    [HttpDelete]
+    [Produces(contentType: "application/json")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<IActionResult> DeleteAsync(int id)
+    {
+        var cachorro = await _cachorroContext.Cachorros.FindAsync(id);
+
+        if (cachorro == null)
+        {
+            return NotFound();
+        }
+
+        _cachorroContext.Cachorros.Remove(cachorro);
+        await _cachorroContext.SaveChangesAsync();
+
+        return NoContent();
     }
 }
