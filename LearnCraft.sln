@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7E7E5816-CDE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnCraft.Api", "src\LearnCraft.Api\LearnCraft.Api.csproj", "{0D87CD5C-E1DB-4791-87F5-82E03274B2C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnCraft.Domain", "src\LearnCraft.Domain\LearnCraft.Domain.csproj", "{764FEC28-105C-4651-A2EE-DA290B2FE8C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnCraft.Repository", "src\LearnCraft.Repository\LearnCraft.Repository.csproj", "{84E48DA9-2D47-453E-A610-0E2CF7EBAA7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +21,21 @@ Global
 		{0D87CD5C-E1DB-4791-87F5-82E03274B2C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D87CD5C-E1DB-4791-87F5-82E03274B2C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D87CD5C-E1DB-4791-87F5-82E03274B2C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{764FEC28-105C-4651-A2EE-DA290B2FE8C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{764FEC28-105C-4651-A2EE-DA290B2FE8C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{764FEC28-105C-4651-A2EE-DA290B2FE8C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{764FEC28-105C-4651-A2EE-DA290B2FE8C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84E48DA9-2D47-453E-A610-0E2CF7EBAA7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84E48DA9-2D47-453E-A610-0E2CF7EBAA7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84E48DA9-2D47-453E-A610-0E2CF7EBAA7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84E48DA9-2D47-453E-A610-0E2CF7EBAA7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0D87CD5C-E1DB-4791-87F5-82E03274B2C9} = {7E7E5816-CDE5-49D7-B66F-B1FFBE47C404}
+		{764FEC28-105C-4651-A2EE-DA290B2FE8C8} = {7E7E5816-CDE5-49D7-B66F-B1FFBE47C404}
+		{84E48DA9-2D47-453E-A610-0E2CF7EBAA7F} = {7E7E5816-CDE5-49D7-B66F-B1FFBE47C404}
 	EndGlobalSection
 EndGlobal

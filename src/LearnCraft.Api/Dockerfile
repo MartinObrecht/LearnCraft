@@ -14,10 +14,10 @@ RUN dotnet restore
 COPY . .
 
 # Build the project
-RUN dotnet build -c Release --no-restore
+RUN dotnet build -c Release
 
 # Publish the project
-RUN dotnet publish -c Release -o /app --no-restore
+RUN dotnet publish -c Release -o /app
 
 # Use a .NET 7.0 runtime image as the base
 FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
