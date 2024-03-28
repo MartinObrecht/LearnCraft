@@ -81,4 +81,23 @@ public class CachorrosController : ControllerBase
 
         return NoContent();
     }
+
+    [HttpPut]
+    [Produces(contentType: "application/json")]
+    [ProducesResponseType(typeof(Cachorro), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<IActionResult> PutAsync(int id, Cachorro cachorro)
+    {
+        if (id != cachorro.Id)
+        {
+            return BadRequest();
+        }
+
+        _cachorroContext.Entry(cachorro).State = EntityState.Modified;
+
+        await _cachorroContext.SaveChangesAsync();
+
+        return Ok(cachorro);
+    }
 }

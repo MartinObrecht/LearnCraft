@@ -1,30 +1,41 @@
+using System.Text.Json.Serialization;
 using LearnCraft.Api.Extensions.Swagger;
 using LearnCraft.Api.Extensions.Telemetry;
 using LearnCraft.Repository;
 using Microsoft.EntityFrameworkCore;
 
-var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddApplicationInsightsExtensions(builder.Configuration);
-builder.Logging.AddLoggingExtensions(builder.Configuration);
-builder.Services.AddControllers();
-builder.Services.AddSwagger();
-builder.Services.AddEndpointsApiExplorer();
-
-builder.Services.AddDbContext<CachorroContext>(options =>
+public class Program
 {
-    options.UseInMemoryDatabase("Cachorros");
-});
+    private static void Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(args);
 
-var app = builder.Build();
+        builder.Services.AddApplicationInsightsExtensions(builder.Configuration);
+        builder.Logging.AddLoggingExtensions(builder.Configuration);
+        builder.Services.AddControllers()
+            .AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.Converters.Add(item: new JsonStringEnumConverter());
+            });
+        builder.Services.AddSwagger();
+        builder.Services.AddEndpointsApiExplorer();
 
-app.UseSwagger();
-app.UseSwaggerUI();
+        builder.Services.AddDbContext<CachorroContext>(options =>
+        {
+            options.UseInMemoryDatabase("Cachorros");
+        });
 
-app.UseHttpsRedirection();
+        var app = builder.Build();
 
-app.UseAuthorization();
+        app.UseSwagger();
+        app.UseSwaggerUI();
 
-app.MapControllers();
+        app.UseHttpsRedirection();
 
-app.Run();
+        app.UseAuthorization();
+
+        app.MapControllers();
+
+        app.Run();
+    }
+}
