@@ -12,8 +12,8 @@ public class Cachorro : BaseEntity<int>
 [Flags]
 public enum Pelagem
 {
-    none,
-    curto,
-    medio,
-    longo
+    None,
+    Curto,
+    Medio,
+    Longo
 }

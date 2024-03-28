@@ -1,0 +1,13 @@
+﻿/home/martin/Workspace/learn-craft/src/LearnCraft.Api/Controllers/CachorrosController.cs
+/home/martin/Workspace/learn-craft/src/LearnCraft.Api/Extensions/Swagger/ConfigureSwaggerOptions.cs
+/home/martin/Workspace/learn-craft/src/LearnCraft.Api/Extensions/Swagger/SwaggerExtensions.cs
+/home/martin/Workspace/learn-craft/src/LearnCraft.Api/Extensions/Telemetry/ApplicationInsightsExtensions.cs
+/home/martin/Workspace/learn-craft/src/LearnCraft.Api/Extensions/Telemetry/LoggingExtensions.cs
+/home/martin/Workspace/learn-craft/src/LearnCraft.Api/Program.cs
+/home/martin/Workspace/learn-craft/src/LearnCraft.Api/obj/Debug/net7.0/LearnCraft.Api.GlobalUsings.g.cs
+/home/martin/Workspace/learn-craft/src/LearnCraft.Api/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs
+/home/martin/Workspace/learn-craft/src/LearnCraft.Api/obj/Debug/net7.0/LearnCraft.Api.AssemblyInfo.cs
+/home/martin/Workspace/learn-craft/src/LearnCraft.Api/obj/Debug/net7.0/LearnCraft.Api.MvcApplicationPartsAssemblyInfo.cs
+/home/martin/Workspace/learn-craft/src/LearnCraft.Api/appsettings.Development.json
+/home/martin/Workspace/learn-craft/src/LearnCraft.Api/appsettings.json
+/home/martin/Workspace/learn-craft/src/LearnCraft.Api/Properties/launchSettings.json
