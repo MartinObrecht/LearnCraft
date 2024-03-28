@@ -1,3 +1,0 @@
-﻿/home/martin/Workspace/learn-craft/src/LearnCraft.Domain/BaseEntity.cs
-/home/martin/Workspace/learn-craft/src/LearnCraft.Domain/Cachorro.cs
-/home/martin/Workspace/learn-craft/src/LearnCraft.Domain/Tutor.cs
