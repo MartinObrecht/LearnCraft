@@ -1,3 +1,5 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=MartinObrecht_LearnCraft&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=MartinObrecht_LearnCraft)
+
 > Para criar a imagem do docker, execute o comando abaixo:
 ```
 docker build -f ./LearnCraft.Api/Dockerfile -t martinobrecht/learcraft:0.3 .
