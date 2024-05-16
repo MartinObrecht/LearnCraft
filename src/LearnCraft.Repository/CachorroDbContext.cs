@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore;
 namespace LearnCraft.Repository;
 
 [ExcludeFromCodeCoverage]
-public class CachorroContext : DbContext
+public class CachorroDbContext : DbContext
 {
-    public CachorroContext(DbContextOptions<CachorroContext> options) : base(options)
+    public CachorroDbContext(DbContextOptions<CachorroDbContext> options) : base(options)
     {
     }
 

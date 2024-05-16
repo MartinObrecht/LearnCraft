@@ -24,7 +24,7 @@ namespace LearnCraft.Api
             builder.Services.AddSwagger();
             builder.Services.AddEndpointsApiExplorer();
 
-            builder.Services.AddDbContext<CachorroContext>(options =>
+            builder.Services.AddDbContext<CachorroDbContext>(options =>
             {
                 options.UseInMemoryDatabase("Cachorros");
             });

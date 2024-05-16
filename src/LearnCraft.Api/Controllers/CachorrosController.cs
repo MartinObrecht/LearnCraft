@@ -10,9 +10,9 @@ namespace LearnCraft.Api.Controllers;
 [Route("api/v{version:apiVersion}/[controller]")]
 public class CachorrosController : ControllerBase
 {
-    private readonly CachorroContext _cachorroContext;
+    private readonly CachorroDbContext _cachorroContext;
 
-    public CachorrosController(CachorroContext cachorroContext)
+    public CachorrosController(CachorroDbContext cachorroContext)
     {
         _cachorroContext = cachorroContext;
     }

@@ -17,12 +17,12 @@ public class CachorrosControllerTest
         //Arrange
         var cachorro = new Domain.Cachorro { Nome = "Manoel", Nascimento = DateTime.Now, Adotado = false, Peso = 10, Pelagem = Domain.Pelagem.Curto };
 
-        var options = new DbContextOptionsBuilder<CachorroContext>()
+        var options = new DbContextOptionsBuilder<CachorroDbContext>()
             .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
             .ConfigureWarnings(x => x.Ignore(InMemoryEventId.TransactionIgnoredWarning))
             .Options;
 
-        using (var context = new CachorroContext(options))
+        using (var context = new CachorroDbContext(options))
         {
             context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
@@ -31,7 +31,7 @@ public class CachorrosControllerTest
             context.SaveChanges();
         }
 
-        using (var context = new CachorroContext(options))
+        using (var context = new CachorroDbContext(options))
         {
             var controller = new CachorrosController(context);
 
@@ -52,12 +52,12 @@ public class CachorrosControllerTest
         //Arrange
         var cachorro = new Domain.Cachorro { Nome = "Manoel", Nascimento = DateTime.Now, Adotado = false, Peso = 10, Pelagem = Domain.Pelagem.Curto };
 
-        var options = new DbContextOptionsBuilder<CachorroContext>()
+        var options = new DbContextOptionsBuilder<CachorroDbContext>()
             .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
             .ConfigureWarnings(x => x.Ignore(InMemoryEventId.TransactionIgnoredWarning))
             .Options;
 
-        using (var context = new CachorroContext(options))
+        using (var context = new CachorroDbContext(options))
         {
             context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
@@ -66,7 +66,7 @@ public class CachorrosControllerTest
             context.SaveChanges();
         }
 
-        using (var context = new CachorroContext(options))
+        using (var context = new CachorroDbContext(options))
         {
             var controller = new CachorrosController(context);
 
@@ -87,18 +87,18 @@ public class CachorrosControllerTest
         //Arrange
         var cachorro = new Domain.Cachorro { Nome = "Manoel", Nascimento = DateTime.Now, Adotado = false, Peso = 10, Pelagem = Domain.Pelagem.Curto };
 
-        var options = new DbContextOptionsBuilder<CachorroContext>()
+        var options = new DbContextOptionsBuilder<CachorroDbContext>()
             .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
             .ConfigureWarnings(x => x.Ignore(InMemoryEventId.TransactionIgnoredWarning))
             .Options;
 
-        using (var context = new CachorroContext(options))
+        using (var context = new CachorroDbContext(options))
         {
             context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
         }
 
-        using (var context = new CachorroContext(options))
+        using (var context = new CachorroDbContext(options))
         {
             var controller = new CachorrosController(context);
 
@@ -119,12 +119,12 @@ public class CachorrosControllerTest
         //Arrange
         var cachorro = new Domain.Cachorro { Nome = "Manoel", Nascimento = DateTime.Now, Adotado = false, Peso = 10, Pelagem = Domain.Pelagem.Curto };
 
-        var options = new DbContextOptionsBuilder<CachorroContext>()
+        var options = new DbContextOptionsBuilder<CachorroDbContext>()
             .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
             .ConfigureWarnings(x => x.Ignore(InMemoryEventId.TransactionIgnoredWarning))
             .Options;
 
-        using (var context = new CachorroContext(options))
+        using (var context = new CachorroDbContext(options))
         {
             context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
@@ -133,7 +133,7 @@ public class CachorrosControllerTest
             context.SaveChanges();
         }
 
-        using (var context = new CachorroContext(options))
+        using (var context = new CachorroDbContext(options))
         {
             var controller = new CachorrosController(context);
 
