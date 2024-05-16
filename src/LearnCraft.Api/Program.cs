@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Text.Json.Serialization;
 using LearnCraft.Api.Extensions.Swagger;
 using LearnCraft.Api.Extensions.Telemetry;
@@ -6,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LearnCraft.Api
 {
+    [ExcludeFromCodeCoverage]
     public static class Program
     {
         private static void Main(string[] args)
